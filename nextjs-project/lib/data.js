@@ -1,0 +1,186 @@
+export const ARTICLES = [
+  {
+    id: 9,
+    slug: 'lmnp-2026-ce-qui-a-change',
+    tag: 'Fiscalité',
+    title: 'LMNP en 2026 : ce qui a changé et ce qu\'il faut anticiper',
+    excerpt: 'La loi Le Meur et la loi de finances 2026 ont profondément reconfiguré le statut de loueur meublé non professionnel. Ce qui était un régime fiscal attractif par défaut demande aujourd\'hui une stratégie réfléchie.',
+    date: '25 mai 2026',
+    dateISO: '2026-05-25',
+    readTime: '3 min',
+    content: `
+      <h2>La réforme majeure : les amortissements réintégrés à la revente</h2>
+      <p>C'est le changement le plus significatif introduit par la loi Le Meur fin 2024 et confirmé en 2026. Jusqu'ici, les amortissements déduits pendant la période de détention ne venaient pas augmenter la plus-value imposable à la revente. C'est désormais le cas pour les biens acquis ou revendus sous certaines conditions.</p>
+      <p>Concrètement, un investisseur qui a amorti 50 000 € sur son bien verra cette somme réintégrée dans le calcul de sa plus-value. L'avantage fiscal à l'entrée se paie donc en partie à la sortie. Ce n'est pas rédhibitoire — mais ça change radicalement le calcul de rentabilité à long terme.</p>
+      <div class="art-box"><p><strong>Ce que ça signifie :</strong> le LMNP reste pertinent, mais il doit désormais être pensé sur l'ensemble de la durée de détention. Un calcul de sortie s'impose avant toute décision d'entrée.</p></div>
+      <h2>Le dispositif Jeanbrun remplace le Pinel</h2>
+      <p>Pour l'investissement locatif neuf, le Pinel a définitivement tiré sa révérence. Le dispositif Jeanbrun prend le relais avec une philosophie différente : il favorise la location à loyers intermédiaires dans les zones tendues, avec des avantages fiscaux conditionnés à des plafonds de loyers et de ressources des locataires.</p>
+      <h2>Location meublée touristique : nouvelles contraintes</h2>
+      <p>Depuis le 20 mai 2026, tous les loueurs de meublés touristiques doivent déclarer leur activité via un téléservice national pour obtenir un numéro d'enregistrement unique. La fiscalité des locations saisonnières est également durcie.</p>
+      <h2>Ce qu'il faut faire maintenant</h2>
+      <ul>
+        <li>Quelle est votre durée de détention envisagée et quel sera l'impact des amortissements réintégrés à la revente ?</li>
+        <li>Votre régime actuel (micro-BIC ou réel) est-il toujours optimal ?</li>
+        <li>Le LMNP reste-t-il le meilleur véhicule pour votre situation ?</li>
+      </ul>
+      <p>Si vous souhaitez en faire le point, commencez par notre analyse patrimoniale gratuite. Nous vous répondons personnellement sous 24h.</p>
+    `
+  },
+  {
+    id: 8,
+    slug: 'loi-de-finances-2026-patrimoine',
+    tag: 'Fiscalité',
+    title: 'Loi de finances 2026 : ce qui change concrètement pour votre patrimoine',
+    excerpt: 'La loi de finances 2026 retouche des points précis qui impactent directement les épargnants, les investisseurs et les chefs d\'entreprise.',
+    date: '13 mai 2026',
+    dateISO: '2026-05-13',
+    readTime: '3 min',
+    content: `
+      <h2>La flat tax passe à 31,4 %</h2>
+      <p>La hausse de la CSG de 1,4 point porte le taux global du prélèvement forfaitaire unique à 31,4 %. Les revenus du capital sont un peu plus taxés. Cette évolution renforce l'intérêt des enveloppes fiscales comme le PER ou l'assurance-vie en unités de compte.</p>
+      <h2>Le PER reste préservé — et renforcé</h2>
+      <p>Le Plan Épargne Retraite n'est pas concerné par la hausse de la CSG. La loi étend la période de report des plafonds non utilisés. Pour les contribuables fortement imposés, le PER conserve tout son intérêt.</p>
+      <h2>La transmission d'entreprise : le Pacte Dutreil durci</h2>
+      <p>Le taux de réinvestissement requis passe de 60 % à 70 %, et le délai de conservation est uniformisé à cinq ans. Les chefs d'entreprise qui envisagent une transmission ont tout intérêt à anticiper.</p>
+      <div class="art-box"><p><strong>Ce qu'il faut retenir :</strong> le patrimoine productif et l'épargne orientée retraite sont encouragés, tandis que le patrimoine statique est davantage taxé.</p></div>
+      <p>Si vous souhaitez analyser l'impact de ces mesures sur votre situation, commencez par notre analyse patrimoniale gratuite. Nous vous répondons sous 24h.</p>
+    `
+  },
+  {
+    id: 7,
+    slug: 'scpi-credit-patrimoine-immobilier-sans-apport-2026',
+    tag: 'SCPI',
+    title: 'SCPI à crédit : comment se constituer un patrimoine immobilier sans apport en 2026',
+    excerpt: 'Dans un contexte de taux en baisse progressive, l\'investissement en SCPI financé à crédit retrouve une logique patrimoniale solide.',
+    date: '11 mai 2026',
+    dateISO: '2026-05-11',
+    readTime: '3 min',
+    content: `
+      <h2>Pourquoi la SCPI à crédit retrouve tout son intérêt en 2026</h2>
+      <p>Dans un contexte où les taux de crédit ont progressivement reflué, l'investissement en SCPI financé à crédit retrouve une logique patrimoniale solide. L'écart entre le coût de l'emprunt et les revenus générés par les meilleures SCPI redevient favorable.</p>
+      <p>Le principe est simple : vous empruntez pour acquérir des parts de SCPI. Les loyers perçus contribuent à rembourser vos mensualités. Vous constituez un patrimoine immobilier diversifié sans mobiliser votre épargne disponible.</p>
+      <h2>Ce que permet l'effet de levier</h2>
+      <p>Contrairement à l'immobilier en direct, la SCPI à crédit ne requiert pas de gestion locative. À cela s'ajoute un avantage fiscal souvent sous-estimé : les intérêts d'emprunt sont intégralement déductibles de vos revenus fonciers.</p>
+      <div class="art-box"><p><strong>À noter :</strong> toutes les banques ne financent pas les SCPI. Le choix de l'établissement prêteur et la négociation des conditions font partie intégrante de notre accompagnement.</p></div>
+      <h2>Le choix de la SCPI : l'étape la plus déterminante</h2>
+      <p>Il existe aujourd'hui un écart marqué entre les véhicules bien positionnés et ceux qui peinent à se réinventer. La sélection du véhicule est l'étape la plus importante du montage, avant même la négociation du financement.</p>
+      <p>Nous accompagnons nos clients sur l'ensemble du processus. C'est notre domaine de prédilection depuis plusieurs années. Commencez par notre analyse patrimoniale gratuite — nous vous répondons sous 24h.</p>
+    `
+  },
+  {
+    id: 1,
+    slug: 'per-2026-epargne-retraite',
+    tag: 'Fiscalité',
+    title: 'PER 2026 : ce qu\'il faut savoir pour votre épargne retraite',
+    excerpt: 'Les règles du Plan Épargne Retraite et leur impact concret sur vos stratégies d\'épargne.',
+    date: '8 mai 2026',
+    dateISO: '2026-05-08',
+    readTime: '2 min',
+    content: `
+      <h2>Le PER en 2026</h2>
+      <p>Le Plan Épargne Retraite reste l'outil de référence pour préparer sa retraite tout en optimisant sa fiscalité. Les plafonds de déductibilité sont revalorisés chaque année en fonction du PASS.</p>
+      <div class="art-box"><p><strong>Point de vigilance :</strong> Les plafonds non utilisés des trois années précédentes peuvent être reportés — c'est souvent une opportunité significative.</p></div>
+      <ul>
+        <li>Vérifier vos plafonds disponibles avant le 31 décembre</li>
+        <li>Arbitrer entre PER individuel et PER collectif</li>
+        <li>Anticiper les conditions de sortie selon vos objectifs</li>
+      </ul>
+    `
+  },
+  {
+    id: 2,
+    slug: 'donation-abattements-transmission',
+    tag: 'Transmission',
+    title: 'Donation et abattements : optimiser avant les évolutions législatives',
+    excerpt: 'Comment tirer parti des dispositifs actuels avant d\'éventuelles modifications.',
+    date: '22 avr. 2026',
+    dateISO: '2026-04-22',
+    readTime: '2 min',
+    content: `
+      <h2>Les abattements en vigueur</h2>
+      <p>Le droit français prévoit des abattements significatifs sur les donations entre parent et enfant, renouvelables tous les 15 ans.</p>
+      <ul>
+        <li>Donations régulières dans la limite des abattements</li>
+        <li>Donation de la nue-propriété avec réserve d'usufruit</li>
+        <li>Donation-partage pour figer les valeurs</li>
+        <li>Pacte Dutreil pour la transmission d'entreprise</li>
+      </ul>
+    `
+  },
+  {
+    id: 3,
+    slug: 'diversification-patrimoniale',
+    tag: 'Investissement',
+    title: 'Diversification patrimoniale : au-delà des idées reçues',
+    excerpt: 'Pourquoi la vraie diversification va bien au-delà de la répartition entre actions et obligations.',
+    date: '10 avr. 2026',
+    dateISO: '2026-04-10',
+    readTime: '2 min',
+    content: `
+      <h2>Repenser la diversification</h2>
+      <p>La réalité d'un patrimoine bien construit est plus nuancée qu'une simple répartition actions/obligations.</p>
+      <ul>
+        <li>Diversification par classes d'actifs</li>
+        <li>Diversification géographique et sectorielle</li>
+        <li>Diversification des enveloppes fiscales (assurance-vie, PEA, PER)</li>
+        <li>Diversification temporelle</li>
+      </ul>
+    `
+  },
+  {
+    id: 4,
+    slug: 'flat-tax-bareme-progressif',
+    tag: 'Fiscalité',
+    title: 'Flat tax ou barème progressif : comment choisir ?',
+    excerpt: 'L\'option pour le barème progressif peut s\'avérer très avantageuse selon votre situation.',
+    date: '2 avr. 2026',
+    dateISO: '2026-04-02',
+    readTime: '1 min',
+    content: `
+      <h2>Le choix entre flat tax et barème</h2>
+      <p>Les revenus du capital sont soumis par défaut à la flat tax (PFU). Il est possible d'opter pour le barème progressif de l'IR si cela est plus avantageux selon votre situation.</p>
+    `
+  },
+  {
+    id: 5,
+    slug: 'retraite-independants-tns',
+    tag: 'Retraite',
+    title: 'Retraite des indépendants : les spécificités à connaître',
+    excerpt: 'TNS, libéraux, dirigeants : les règles de la retraite obligatoire et les solutions pour compléter efficacement.',
+    date: '25 mars 2026',
+    dateISO: '2026-03-25',
+    readTime: '2 min',
+    content: `
+      <h2>La retraite des travailleurs indépendants</h2>
+      <p>Les TNS bénéficient d'un régime de retraite moins favorable que celui des salariés. L'anticipation est encore plus cruciale — et les marges d'optimisation souvent bien plus importantes.</p>
+    `
+  },
+  {
+    id: 6,
+    slug: 'sci-familiale-vs-scpi',
+    tag: 'SCPI',
+    title: 'SCI familiale vs SCPI : laquelle choisir pour votre patrimoine ?',
+    excerpt: 'Deux outils, deux logiques. Comparatif pour choisir la bonne structure.',
+    date: '18 mars 2026',
+    dateISO: '2026-03-18',
+    readTime: '2 min',
+    content: `
+      <h2>SCI et SCPI : deux outils complémentaires</h2>
+      <p>La SCI familiale convient à la gestion et transmission d'un patrimoine immobilier en direct. La SCPI offre un accès à l'immobilier professionnel diversifié, sans contrainte de gestion locative.</p>
+      <ul>
+        <li>SCI : contrôle direct, transmission facilitée</li>
+        <li>SCPI : diversification, gestion déléguée, revenus potentiels</li>
+        <li>Les deux peuvent être complémentaires</li>
+      </ul>
+    `
+  },
+];
+
+export const SERVICES = [
+  { slug: 'gestion-de-patrimoine', num: '01', title: 'Gestion de patrimoine', subtitle: 'Vision globale, audit complet, stratégie sur-mesure.', desc: 'La gestion de patrimoine englobe bien plus que la sélection de placements. Elle intègre votre patrimoine immobilier, financier, professionnel, vos droits à la retraite et votre situation fiscale.' },
+  { slug: 'scpi-financement', num: '02', title: 'SCPI en financement', subtitle: 'Notre spécialité : l\'effet de levier au service de votre patrimoine.', desc: 'Nous accompagnons nos clients de la sélection des SCPI adaptées jusqu\'à la mise en place du financement. C\'est notre domaine de prédilection.', star: true },
+  { slug: 'optimisation-fiscale', num: '03', title: 'Optimisation fiscale', subtitle: 'Stratégies légales, conformes et sobres.', desc: 'L\'optimisation fiscale consiste à utiliser intelligemment les dispositifs légaux existants. Notre approche est sobre : aucun montage artificiel.' },
+  { slug: 'preparation-retraite', num: '04', title: 'Préparation retraite', subtitle: 'Anticiper, structurer et sécuriser votre avenir.', desc: 'La retraite se prépare sur le long terme. Plus on anticipe, plus les marges de manœuvre sont importantes.' },
+  { slug: 'transmission-succession', num: '05', title: 'Transmission & succession', subtitle: 'Organiser la transmission dans les meilleures conditions.', desc: 'La transmission patrimoniale mérite d\'être abordée sereinement, avec méthode et en coordination avec votre notaire.' },
+  { slug: 'conseil-investissement', num: '06', title: 'Conseil en investissement', subtitle: 'Approche prudente, personnalisée, sans conflit d\'intérêt.', desc: 'Notre rôle est de vous aider à comprendre les solutions disponibles et à prendre des décisions éclairées.' },
+];
