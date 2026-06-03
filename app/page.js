@@ -10,17 +10,29 @@ export const metadata = {
 };
 
 export default function HomePage() {
-  const featuredArticle = ARTICLES[0];
-  const recentArticles = ARTICLES.slice(1, 4);
-
   return (
     <>
       <Topbar current="home"/>
+      <style>{`
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+        .svc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: #E6E1D8; }
+        .analyse-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+        .blog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: #E6E1D8; }
+        @media (max-width: 768px) {
+          .hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+          .svc-grid { grid-template-columns: 1fr !important; }
+          .analyse-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+          .blog-grid { grid-template-columns: 1fr !important; }
+          .hero-section { padding: 100px 20px 60px !important; }
+          .section-pad { padding: 60px 20px !important; }
+          .topbar-right-text { display: none !important; }
+        }
+      `}</style>
       <main>
         {/* HERO */}
-        <section style={{minHeight:'100vh',display:'flex',alignItems:'center',padding:'130px 52px 80px',position:'relative',overflow:'hidden',background:'linear-gradient(110deg, #FAFAF7 0%, #FAFAF7 45%, #EAE4DA 100%)'}}>
-          <div style={{position:'absolute',bottom:80,left:52,width:90,height:1,background:'#C4B49A',transformOrigin:'left',animation:'growX 1.4s 1.2s cubic-bezier(.22,1,.36,1) both'}}/>
-          <div style={{maxWidth:1240,margin:'0 auto',width:'100%',display:'grid',gridTemplateColumns:'1fr 1fr',gap:72,alignItems:'center',position:'relative',zIndex:1}}>
+        <section className="hero-section" style={{minHeight:'100vh',display:'flex',alignItems:'center',padding:'130px 52px 80px',position:'relative',overflow:'hidden',background:'linear-gradient(110deg, #FAFAF7 0%, #FAFAF7 45%, #EAE4DA 100%)'}}>
+          <div style={{position:'absolute',bottom:80,left:52,width:90,height:1,background:'#C4B49A',transformOrigin:'left'}}/>
+          <div className="hero-grid" style={{maxWidth:1240,margin:'0 auto',width:'100%',position:'relative',zIndex:1}}>
             <div>
               <div style={{fontSize:9.5,fontWeight:400,letterSpacing:'.28em',textTransform:'uppercase',color:'#8E7355',marginBottom:20,display:'flex',alignItems:'center',gap:10}}>
                 <span style={{width:28,height:1,background:'#C4B49A',display:'inline-block',flexShrink:0}}/>
@@ -47,7 +59,7 @@ export default function HomePage() {
         </section>
 
         {/* SERVICES */}
-        <section style={{padding:'96px 52px',background:'#F6F4EF'}}>
+        <section className="section-pad" style={{padding:'96px 52px',background:'#F6F4EF'}}>
           <div style={{maxWidth:1240,margin:'0 auto'}}>
             <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-end',marginBottom:56,flexWrap:'wrap',gap:20}}>
               <div>
@@ -59,7 +71,7 @@ export default function HomePage() {
                 </h2>
               </div>
             </div>
-            <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:1,background:'#E6E1D8'}}>
+            <div className="svc-grid">
               {SERVICES.map(s=>(
                 <Link key={s.slug} href={`/services/${s.slug}`} style={{
                   background:s.star?'#1C1C1C':'#F6F4EF',
@@ -78,31 +90,33 @@ export default function HomePage() {
         </section>
 
         {/* ANALYSE FULL */}
-        <section style={{background:'#1C1C1C',padding:'80px 52px'}}>
-          <div style={{maxWidth:1240,margin:'0 auto',display:'grid',gridTemplateColumns:'1fr 1fr',gap:72,alignItems:'center'}}>
-            <div>
-              <div style={{fontSize:9.5,letterSpacing:'.28em',textTransform:'uppercase',color:'#8E7355',marginBottom:14,display:'flex',alignItems:'center',gap:10}}>
-                <span style={{width:22,height:1,background:'#8E7355',display:'inline-block'}}/>Analyse patrimoniale gratuite
-              </div>
-              <h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(30px,3.5vw,50px)',fontWeight:300,color:'#F6F4EF',lineHeight:1.15,marginBottom:16}}>
-                Votre dossier, <em style={{fontStyle:'italic',color:'#8E7355'}}>directement</em> entre les bonnes mains.
-              </h2>
-              <p style={{fontSize:14,fontWeight:300,color:'rgba(246,244,239,.45)',lineHeight:1.8,maxWidth:380,marginBottom:32}}>
-                3 questions, moins d'une minute. Nous analysons personnellement chaque dossier et vous répondons sous 24h ouvrées.
-              </p>
-              {[['◎','Analyse 100% gratuite','Sans engagement, sans frais'],['⊙','Confidentiel','Vos données restent privées'],['✓','Réponse sous 24h','Personnelle, par téléphone ou visio']].map(([ico,t,d])=>(
-                <div key={t} style={{display:'flex',alignItems:'flex-start',gap:12,marginBottom:14}}>
-                  <div style={{width:28,height:28,borderRadius:'50%',border:'1px solid rgba(196,180,154,.2)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:11,color:'#C4B49A',flexShrink:0}}>{ico}</div>
-                  <div><div style={{fontSize:12,fontWeight:500,color:'#F6F4EF',marginBottom:2}}>{t}</div><div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.35)'}}>{d}</div></div>
+        <section className="section-pad" style={{background:'#1C1C1C',padding:'80px 52px'}}>
+          <div style={{maxWidth:1240,margin:'0 auto'}}>
+            <div className="analyse-grid">
+              <div>
+                <div style={{fontSize:9.5,letterSpacing:'.28em',textTransform:'uppercase',color:'#8E7355',marginBottom:14,display:'flex',alignItems:'center',gap:10}}>
+                  <span style={{width:22,height:1,background:'#8E7355',display:'inline-block'}}/>Analyse patrimoniale gratuite
                 </div>
-              ))}
+                <h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(26px,3.5vw,50px)',fontWeight:300,color:'#F6F4EF',lineHeight:1.15,marginBottom:16}}>
+                  Votre dossier, <em style={{fontStyle:'italic',color:'#8E7355'}}>directement</em> entre les bonnes mains.
+                </h2>
+                <p style={{fontSize:14,fontWeight:300,color:'rgba(246,244,239,.45)',lineHeight:1.8,maxWidth:380,marginBottom:32}}>
+                  3 questions, moins d'une minute. Nous analysons personnellement chaque dossier et vous répondons sous 24h ouvrées.
+                </p>
+                {[['◎','Analyse 100% gratuite','Sans engagement, sans frais'],['⊙','Confidentiel','Vos données restent privées'],['✓','Réponse sous 24h','Personnelle, par téléphone ou visio']].map(([ico,t,d])=>(
+                  <div key={t} style={{display:'flex',alignItems:'flex-start',gap:12,marginBottom:14}}>
+                    <div style={{width:28,height:28,borderRadius:'50%',border:'1px solid rgba(196,180,154,.2)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:11,color:'#C4B49A',flexShrink:0}}>{ico}</div>
+                    <div><div style={{fontSize:12,fontWeight:500,color:'#F6F4EF',marginBottom:2}}>{t}</div><div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.35)'}}>{d}</div></div>
+                  </div>
+                ))}
+              </div>
+              <Funnel/>
             </div>
-            <Funnel/>
           </div>
         </section>
 
         {/* BLOG */}
-        <section style={{padding:'96px 52px',background:'#F6F4EF'}}>
+        <section className="section-pad" style={{padding:'96px 52px',background:'#F6F4EF'}}>
           <div style={{maxWidth:1240,margin:'0 auto'}}>
             <div style={{display:'flex',justifyContent:'space-between',alignItems:'flex-end',marginBottom:44,flexWrap:'wrap',gap:20}}>
               <div>
@@ -115,7 +129,7 @@ export default function HomePage() {
               </div>
               <Link href="/ressources" style={{display:'inline-flex',padding:'9px 20px',fontFamily:"'DM Sans',sans-serif",fontSize:9.5,letterSpacing:'.14em',textTransform:'uppercase',border:'1px solid #E6E1D8',color:'#1C1C1C',textDecoration:'none'}}>Tous les articles →</Link>
             </div>
-            <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:1,background:'#E6E1D8'}}>
+            <div className="blog-grid">
               {ARTICLES.slice(0,3).map(a=>(
                 <Link key={a.id} href={`/article/${a.slug}`} style={{background:'#FAFAF7',padding:'30px 26px',textDecoration:'none',display:'flex',flexDirection:'column'}}>
                   <div style={{fontSize:8.5,letterSpacing:'.22em',textTransform:'uppercase',color:'#8E7355',marginBottom:12}}>{a.tag}</div>
