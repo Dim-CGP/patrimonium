@@ -4,8 +4,18 @@ import { useRouter } from 'next/navigation';
 export default function Footer() {
   const router = useRouter();
   return (
+    <>
+    <style>{`
+      .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:44px}
+      .footer-bottom-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+      @media(max-width:768px){
+        .footer-grid{grid-template-columns:1fr !important;gap:32px !important}
+        .footer-bottom-row{flex-direction:column;align-items:flex-start}
+        footer{padding:44px 20px 28px !important}
+      }
+    `}</style>
     <footer style={{background:'#1C1C1C',padding:'58px 52px 34px'}}>
-      <div style={{maxWidth:1240,margin:'0 auto',display:'grid',gridTemplateColumns:'1.6fr 1fr 1fr 1fr',gap:44,paddingBottom:40,borderBottom:'1px solid rgba(255,255,255,.07)'}}>
+      <div className="footer-grid" style={{maxWidth:1240,margin:'0 auto',paddingBottom:40,borderBottom:'1px solid rgba(255,255,255,.07)'}}>
         <div>
           <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:17,fontWeight:400,color:'#F6F4EF',letterSpacing:'.06em',marginBottom:2}}>Patrimonium</div>
           <div style={{fontSize:8.5,letterSpacing:'.22em',textTransform:'uppercase',color:'#8E7355',marginBottom:16}}>Conseil en gestion de patrimoine</div>
@@ -60,5 +70,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </>
   );
 }
