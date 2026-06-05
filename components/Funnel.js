@@ -15,9 +15,18 @@ export default function Funnel({variant='full'}) {
   const [state,setState] = useState({submitting:false,succeeded:false,errors:[]});
 
   const profileOpts = [
-    {t:'Particulier salarié', d:'Revenus salariaux, patrimoine personnel'},
-    {t:'Chef d\'entreprise', d:'Dirigeant, TNS, profession libérale'},
-    {t:'Famille / couple', d:'Projet patrimonial commun'},
+    {
+      t:'Particulier salarié', d:'Revenus salariaux, patrimoine personnel',
+      svg:<svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><circle cx="9" cy="6" r="3"/><path d="M3 16c0-3.3 2.7-6 6-6s6 2.7 6 6"/></svg>
+    },
+    {
+      t:'Chef d\'entreprise', d:'Dirigeant, TNS, profession libérale',
+      svg:<svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="14" height="9"/><path d="M5 7V5a4 4 0 018 0v2"/><line x1="9" y1="11" x2="9" y2="13"/></svg>
+    },
+    {
+      t:'Famille / couple', d:'Projet patrimonial commun',
+      svg:<svg width="16" height="16" viewBox="0 0 18 18" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"><circle cx="6.5" cy="6" r="2.5"/><circle cx="11.5" cy="6" r="2.5"/><path d="M1 16c0-3 2.5-5 5.5-5"/><path d="M17 16c0-3-2.5-5-5.5-5"/><path d="M6 16c0-2.2 1.3-4 3-4s3 1.8 3 4"/></svg>
+    },
   ];
 
   const toggle = p => setData(d=>({...d,projets:d.projets.includes(p)?d.projets.filter(x=>x!==p):[...d.projets,p]}));
@@ -98,9 +107,8 @@ export default function Funnel({variant='full'}) {
                   cursor:'pointer',transition:'all .2s'}}>
                 <div style={{width:32,height:32,borderRadius:'50%',border:`1px solid ${data.profil===o.t?gold:'rgba(196,180,154,.25)'}`,
                   display:'flex',alignItems:'center',justifyContent:'center',
-                  fontFamily:"'Cormorant Garamond',serif",fontSize:14,fontStyle:'italic',
                   color:data.profil===o.t?gold:'rgba(196,180,154,.6)',flexShrink:0}}>
-                  {o.t[0]}
+                  {o.svg}
                 </div>
                 <div>
                   <div style={{fontSize:13,fontWeight:400,color:cream}}>{o.t}</div>

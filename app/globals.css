@@ -19,6 +19,7 @@ body{
   color:var(--ink);
   line-height:1.6;
   overflow-x:hidden;
+  max-width:100%;
 }
 .serif{font-family:'Cormorant Garamond',serif}
 

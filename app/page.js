@@ -14,6 +14,7 @@ export default function HomePage() {
     <>
       <Topbar current="home"/>
       <style>{`
+html, body { overflow-x: hidden; max-width: 100%; }
         .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
         .svc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: #E6E1D8; }
         .analyse-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
@@ -25,7 +26,6 @@ export default function HomePage() {
           .blog-grid { grid-template-columns: 1fr !important; }
           .hero-section { padding: 100px 20px 60px !important; }
           .section-pad { padding: 60px 20px !important; }
-          .topbar-right-text { display: none !important; }
         }
       `}</style>
       <main>
