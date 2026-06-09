@@ -16,6 +16,9 @@ export async function generateMetadata({ params }) {
   return {
     title: `${article.title} — Patrimonium`,
     description: article.excerpt,
+    alternates: {
+      canonical: `https://cabinet-patrimonium.fr/article/${article.slug}`,
+    },
     openGraph: {
       title: article.title,
       description: article.excerpt,
@@ -37,11 +40,10 @@ export default async function ArticlePage({ params }) {
     <>
       <Topbar current="ressources"/>
       <main>
-        {/* Hero article */}
         <div style={{padding:'136px 52px 68px',background:'#F6F4EF',borderBottom:'1px solid #E6E1D8',position:'relative',overflow:'hidden'}}>
           <div style={{position:'absolute',top:0,right:0,width:'26%',height:'100%',background:'linear-gradient(to left,#E6E1D8,transparent)',pointerEvents:'none'}}/>
           <div style={{maxWidth:720,position:'relative',zIndex:1}}>
-            <div style={{display:'flex',alignItems:'center',gap:6,fontSize:9.5,letterSpacing:'.18em',textTransform:'uppercase',color:'#C4B49A',marginBottom:18,cursor:'pointer'}}>
+            <div style={{display:'flex',alignItems:'center',gap:6,fontSize:9.5,letterSpacing:'.18em',textTransform:'uppercase',color:'#C4B49A',marginBottom:18}}>
               <Link href="/ressources" style={{textDecoration:'none',color:'#C4B49A'}}>← Ressources</Link>
               <span>/</span>
               <span>{article.tag}</span>
@@ -52,7 +54,6 @@ export default async function ArticlePage({ params }) {
           </div>
         </div>
 
-        {/* Corps article */}
         <div style={{maxWidth:720,margin:'0 auto',padding:'68px 52px'}} dangerouslySetInnerHTML={{__html:`
           <style>
             .art-body h2{font-family:'Cormorant Garamond',serif;font-size:25px;font-weight:300;color:#1C1C1C;margin:36px 0 12px;line-height:1.3}
@@ -68,7 +69,6 @@ export default async function ArticlePage({ params }) {
           <div class="art-body">${article.content}</div>
         `}}/>
 
-        {/* CTA */}
         <div style={{padding:'88px 52px',background:'#F6F4EF',borderTop:'1px solid #E6E1D8',borderBottom:'1px solid #E6E1D8'}}>
           <div style={{maxWidth:800,margin:'0 auto',textAlign:'center'}}>
             <h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(28px,4vw,50px)',fontWeight:300,color:'#1C1C1C',lineHeight:1.2,marginBottom:14}}>
@@ -83,7 +83,6 @@ export default async function ArticlePage({ params }) {
           </div>
         </div>
 
-        {/* Articles liés */}
         {others.length > 0 && (
           <section style={{padding:'72px 52px',background:'#FAFAF7'}}>
             <div style={{maxWidth:1240,margin:'0 auto'}}>
