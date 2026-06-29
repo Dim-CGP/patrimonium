@@ -76,7 +76,7 @@ export default function Funnel({variant='full'}) {
 
       {/* Progress */}
       <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:28}}>
-        <div style={{fontSize:9,letterSpacing:'.18em',textTransform:'uppercase',color:'rgba(196,180,154,.4)'}}>
+        <div style={{fontSize:9,letterSpacing:'.18em',textTransform:'uppercase',color:'rgba(196,180,154,.95)',color:'rgba(196,180,154,.4)'}}>
           {state.succeeded ? 'Terminé' : `Étape ${step+1} sur 4`}
         </div>
         <div style={{display:'flex',gap:6}}>
@@ -96,7 +96,7 @@ export default function Funnel({variant='full'}) {
         </div>
       ) : step===0 ? (
         <>
-          <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:22,fontWeight:300,color:cream,marginBottom:6}}>Votre <em style={{fontStyle:'italic',color:gold}}>profil</em> ?</div>
+          <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:22,fontWeight:300,color:cream,marginBottom:6}}>Votre <em style={{fontStyle:'italic',color:'#C4945A'}}>profil</em> ?</div>
           <div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.6)',marginBottom:20}}>Sélectionnez pour continuer</div>
           <div style={{display:'flex',flexDirection:'column',gap:8}}>
             {profileOpts.map(o=>(
@@ -114,14 +114,14 @@ export default function Funnel({variant='full'}) {
                   <div style={{fontSize:13,fontWeight:400,color:cream}}>{o.t}</div>
                   <div style={{fontSize:10.5,fontWeight:300,color:'rgba(246,244,239,.6)'}}>{o.d}</div>
                 </div>
-                <span style={{marginLeft:'auto',color:gold,fontSize:14}}>→</span>
+                <span style={{marginLeft:'auto',color:'#C4945A',fontSize:14}}>→</span>
               </div>
             ))}
           </div>
         </>
       ) : step===1 ? (
         <>
-          <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:22,fontWeight:300,color:cream,marginBottom:6}}>Montant <em style={{fontStyle:'italic',color:gold}}>envisagé</em> ?</div>
+          <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:22,fontWeight:300,color:cream,marginBottom:6}}>Montant <em style={{fontStyle:'italic',color:'#C4945A'}}>envisagé</em> ?</div>
           <div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.6)',marginBottom:20}}>Indicatif · sans engagement · min. 10 000 €</div>
           <div style={{fontFamily:"'DM Sans',sans-serif",fontSize:44,fontWeight:300,color:cream,lineHeight:1,marginBottom:4}}>{fmtAmt(data.montant)}</div>
           <input type="range" min={10000} max={500000} step={5000} value={data.montant}
@@ -136,7 +136,7 @@ export default function Funnel({variant='full'}) {
         </>
       ) : step===2 ? (
         <>
-          <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:22,fontWeight:300,color:cream,marginBottom:6}}>Vos <em style={{fontStyle:'italic',color:gold}}>projets</em> ?</div>
+          <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:22,fontWeight:300,color:cream,marginBottom:6}}>Vos <em style={{fontStyle:'italic',color:'#C4945A'}}>projets</em> ?</div>
           <div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.6)',marginBottom:20}}>Plusieurs choix possibles</div>
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8}}>
             {PROJETS.map(p=>(
@@ -151,7 +151,7 @@ export default function Funnel({variant='full'}) {
         </>
       ) : (
         <>
-          <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:22,fontWeight:300,color:cream,marginBottom:6}}>Vos <em style={{fontStyle:'italic',color:gold}}>coordonnées</em></div>
+          <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:22,fontWeight:300,color:cream,marginBottom:6}}>Vos <em style={{fontStyle:'italic',color:'#C4945A'}}>coordonnées</em></div>
           <div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.6)',marginBottom:16}}>Réponse personnalisée sous 24h ouvrées</div>
           <div style={{background:'rgba(196,180,154,.06)',padding:'10px 14px',marginBottom:16,display:'flex',justifyContent:'space-between',flexWrap:'wrap',gap:8,fontSize:11,color:'rgba(246,244,239,.4)'}}>
             <span>{data.profil}</span>

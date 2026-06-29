@@ -44,13 +44,13 @@ export default async function ArticlePage({ params }) {
           <div style={{position:'absolute',top:0,right:0,width:'26%',height:'100%',background:'linear-gradient(to left,#E6E1D8,transparent)',pointerEvents:'none'}}/>
           <div style={{maxWidth:720,position:'relative',zIndex:1}}>
             <div style={{display:'flex',alignItems:'center',gap:6,fontSize:9.5,letterSpacing:'.18em',textTransform:'uppercase',color:'#C4B49A',marginBottom:18}}>
-              <Link href="/ressources" style={{textDecoration:'none',color:'#C4B49A'}}>← Ressources</Link>
+              <Link href="/ressources" style={{textDecoration:'none',color:'#7A6040'}}>← Ressources</Link>
               <span>/</span>
               <span>{article.tag}</span>
             </div>
             <h1 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(26px,3.5vw,44px)',fontWeight:300,color:'#1C1C1C',lineHeight:1.1,marginBottom:16}}>{article.title}</h1>
             <p style={{fontSize:14.5,fontWeight:300,color:'#6A6560',lineHeight:1.85,maxWidth:580}}>{article.excerpt}</p>
-            <div style={{marginTop:18,fontSize:10.5,letterSpacing:'.12em',textTransform:'uppercase',color:'#C4B49A'}}>{article.date} · {article.readTime} de lecture</div>
+            <div style={{marginTop:18,fontSize:10.5,letterSpacing:'.12em',textTransform:'uppercase',color:'#7A6040'}}>{article.date} · {article.readTime} de lecture</div>
           </div>
         </div>
 
@@ -94,7 +94,7 @@ export default async function ArticlePage({ params }) {
                   <Link key={a.id} href={`/article/${a.slug}`} style={{background:'#FAFAF7',padding:'28px 24px',textDecoration:'none',display:'block'}}>
                     <div style={{fontSize:8.5,letterSpacing:'.18em',textTransform:'uppercase',color:'#8E7355',marginBottom:10}}>{a.tag}</div>
                     <h3 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:17,fontWeight:400,color:'#1C1C1C',lineHeight:1.35,marginBottom:8}}>{a.title}</h3>
-                    <div style={{fontSize:9,letterSpacing:'.1em',color:'#C4B49A',textTransform:'uppercase'}}>{a.date}</div>
+                    <div style={{fontSize:9,letterSpacing:'.1em',color:'#7A6040',textTransform:'uppercase'}}>{a.date}</div>
                   </Link>
                 ))}
               </div>

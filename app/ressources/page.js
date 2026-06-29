@@ -52,7 +52,7 @@ export default function RessourcesPage() {
                     <div style={{fontSize:8.5,letterSpacing:'.22em',textTransform:'uppercase',color:'#8E7355',marginBottom:12}}>{a.tag}</div>
                     <h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize: i===0 ? 28 : 19,fontWeight:400,color:'#1C1C1C',lineHeight:1.35,marginBottom:10}}>{a.title}</h2>
                     <p style={{fontSize:12,fontWeight:300,color:'#6A6560',lineHeight:1.7,marginBottom:14}}>{a.excerpt}</p>
-                    <div style={{fontSize:9,letterSpacing:'.12em',color:'#C4B49A',textTransform:'uppercase'}}>{a.date} · {a.readTime} de lecture</div>
+                    <div style={{fontSize:9,letterSpacing:'.12em',color:'#7A6040',textTransform:'uppercase'}}>{a.date} · {a.readTime} de lecture</div>
                     <span style={{fontSize:9.5,letterSpacing:'.14em',textTransform:'uppercase',color:'#8E7355',marginTop:11,display:'inline-block'}}>Lire l'article →</span>
                   </div>
                   {i===0 && (

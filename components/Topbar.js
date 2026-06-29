@@ -70,7 +70,7 @@ export default function Topbar({ current }) {
 
         {/* Mobile hamburger */}
         {isMobile && (
-          <button onClick={()=>setMenuOpen(o=>!o)} style={{
+          <button onClick={()=>setMenuOpen(o=>!o)} aria-label="Menu de navigation" style={{
             background:'none',border:'none',cursor:'pointer',
             display:'flex',flexDirection:'column',gap:5,padding:10,
           }}>
