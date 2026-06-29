@@ -100,13 +100,13 @@ html, body { overflow-x: hidden; max-width: 100%; }
                 <h2 style={{fontFamily:"'Cormorant Garamond',serif",fontSize:'clamp(26px,3.5vw,50px)',fontWeight:300,color:'#F6F4EF',lineHeight:1.15,marginBottom:16}}>
                   Votre dossier, <em style={{fontStyle:'italic',color:'#8E7355'}}>directement</em> entre les bonnes mains.
                 </h2>
-                <p style={{fontSize:14,fontWeight:300,color:'rgba(246,244,239,.45)',lineHeight:1.8,maxWidth:380,marginBottom:32}}>
+                <p style={{fontSize:14,fontWeight:300,color:'rgba(246,244,239,.75)',lineHeight:1.8,maxWidth:380,marginBottom:32}}>
                   3 questions, moins d'une minute. Nous analysons personnellement chaque dossier et vous répondons sous 24h ouvrées.
                 </p>
                 {[['◎','Analyse 100% gratuite','Sans engagement, sans frais'],['⊙','Confidentiel','Vos données restent privées'],['✓','Réponse sous 24h','Personnelle, par téléphone ou visio']].map(([ico,t,d])=>(
                   <div key={t} style={{display:'flex',alignItems:'flex-start',gap:12,marginBottom:14}}>
                     <div style={{width:28,height:28,borderRadius:'50%',border:'1px solid rgba(196,180,154,.2)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:11,color:'#C4B49A',flexShrink:0}}>{ico}</div>
-                    <div><div style={{fontSize:12,fontWeight:500,color:'#F6F4EF',marginBottom:2}}>{t}</div><div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.35)'}}>{d}</div></div>
+                    <div><div style={{fontSize:12,fontWeight:500,color:'#F6F4EF',marginBottom:2}}>{t}</div><div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.65)'}}>{d}</div></div>
                   </div>
                 ))}
               </div>

@@ -92,12 +92,12 @@ export default function Funnel({variant='full'}) {
         <div style={{textAlign:'center',padding:'20px 0'}}>
           <div style={{width:52,height:52,borderRadius:'50%',background:'#3E6B37',display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 16px',fontSize:22,color:'#fff'}}>✓</div>
           <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:26,fontWeight:300,color:cream,marginBottom:10}}>Dossier reçu, merci !</div>
-          <p style={{fontSize:13,fontWeight:300,color:'rgba(246,244,239,.45)',lineHeight:1.7}}>Nous l'examinons personnellement et vous contactons dans les 24h ouvrées.</p>
+          <p style={{fontSize:13,fontWeight:300,color:'rgba(246,244,239,.7)',lineHeight:1.7}}>Nous l'examinons personnellement et vous contactons dans les 24h ouvrées.</p>
         </div>
       ) : step===0 ? (
         <>
           <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:22,fontWeight:300,color:cream,marginBottom:6}}>Votre <em style={{fontStyle:'italic',color:gold}}>profil</em> ?</div>
-          <div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.3)',marginBottom:20}}>Sélectionnez pour continuer</div>
+          <div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.6)',marginBottom:20}}>Sélectionnez pour continuer</div>
           <div style={{display:'flex',flexDirection:'column',gap:8}}>
             {profileOpts.map(o=>(
               <div key={o.t} onClick={()=>{setData(d=>({...d,profil:o.t}));setStep(1);}}
@@ -112,7 +112,7 @@ export default function Funnel({variant='full'}) {
                 </div>
                 <div>
                   <div style={{fontSize:13,fontWeight:400,color:cream}}>{o.t}</div>
-                  <div style={{fontSize:10.5,fontWeight:300,color:'rgba(246,244,239,.35)'}}>{o.d}</div>
+                  <div style={{fontSize:10.5,fontWeight:300,color:'rgba(246,244,239,.6)'}}>{o.d}</div>
                 </div>
                 <span style={{marginLeft:'auto',color:gold,fontSize:14}}>→</span>
               </div>
@@ -122,7 +122,7 @@ export default function Funnel({variant='full'}) {
       ) : step===1 ? (
         <>
           <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:22,fontWeight:300,color:cream,marginBottom:6}}>Montant <em style={{fontStyle:'italic',color:gold}}>envisagé</em> ?</div>
-          <div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.3)',marginBottom:20}}>Indicatif · sans engagement · min. 10 000 €</div>
+          <div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.6)',marginBottom:20}}>Indicatif · sans engagement · min. 10 000 €</div>
           <div style={{fontFamily:"'DM Sans',sans-serif",fontSize:44,fontWeight:300,color:cream,lineHeight:1,marginBottom:4}}>{fmtAmt(data.montant)}</div>
           <input type="range" min={10000} max={500000} step={5000} value={data.montant}
             onChange={e=>setData(d=>({...d,montant:+e.target.value}))}
@@ -137,7 +137,7 @@ export default function Funnel({variant='full'}) {
       ) : step===2 ? (
         <>
           <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:22,fontWeight:300,color:cream,marginBottom:6}}>Vos <em style={{fontStyle:'italic',color:gold}}>projets</em> ?</div>
-          <div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.3)',marginBottom:20}}>Plusieurs choix possibles</div>
+          <div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.6)',marginBottom:20}}>Plusieurs choix possibles</div>
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8}}>
             {PROJETS.map(p=>(
               <div key={p} onClick={()=>toggle(p)} style={{display:'flex',alignItems:'center',gap:10,padding:'12px 14px',
@@ -152,7 +152,7 @@ export default function Funnel({variant='full'}) {
       ) : (
         <>
           <div style={{fontFamily:"'Cormorant Garamond',serif",fontSize:22,fontWeight:300,color:cream,marginBottom:6}}>Vos <em style={{fontStyle:'italic',color:gold}}>coordonnées</em></div>
-          <div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.3)',marginBottom:16}}>Réponse personnalisée sous 24h ouvrées</div>
+          <div style={{fontSize:11,fontWeight:300,color:'rgba(246,244,239,.6)',marginBottom:16}}>Réponse personnalisée sous 24h ouvrées</div>
           <div style={{background:'rgba(196,180,154,.06)',padding:'10px 14px',marginBottom:16,display:'flex',justifyContent:'space-between',flexWrap:'wrap',gap:8,fontSize:11,color:'rgba(246,244,239,.4)'}}>
             <span>{data.profil}</span>
             <span style={{color:warm}}>{fmtAmt(data.montant)}</span>
@@ -161,14 +161,14 @@ export default function Funnel({variant='full'}) {
           <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,marginBottom:8}}>
             {[['Prénom *','prenom','Jean'],['Téléphone','telephone','06 XX XX XX XX']].map(([l,k,ph])=>(
               <div key={k}>
-                <label style={{fontSize:9,fontWeight:400,letterSpacing:'.18em',textTransform:'uppercase',color:'rgba(196,180,154,.55)',display:'block',marginBottom:5}}>{l}</label>
+                <label style={{fontSize:9,fontWeight:400,letterSpacing:'.18em',textTransform:'uppercase',color:'rgba(196,180,154,.9)',display:'block',marginBottom:5}}>{l}</label>
                 <input value={data[k]} onChange={e=>setData(d=>({...d,[k]:e.target.value}))} placeholder={ph}
                   style={{width:'100%',padding:'11px 13px',background:'rgba(255,255,255,.04)',border:'1px solid rgba(196,180,154,.13)',color:cream,fontFamily:"'DM Sans',sans-serif",fontSize:13,fontWeight:300,outline:'none'}}/>
               </div>
             ))}
           </div>
           <div>
-            <label style={{fontSize:9,fontWeight:400,letterSpacing:'.18em',textTransform:'uppercase',color:'rgba(196,180,154,.55)',display:'block',marginBottom:5}}>Email *</label>
+            <label style={{fontSize:9,fontWeight:400,letterSpacing:'.18em',textTransform:'uppercase',color:'rgba(196,180,154,.9)',display:'block',marginBottom:5}}>Email *</label>
             <input type="email" value={data.email} onChange={e=>setData(d=>({...d,email:e.target.value}))} placeholder="jean@exemple.fr"
               style={{width:'100%',padding:'11px 13px',background:'rgba(255,255,255,.04)',border:'1px solid rgba(196,180,154,.13)',color:cream,fontFamily:"'DM Sans',sans-serif",fontSize:13,fontWeight:300,outline:'none'}}/>
           </div>
